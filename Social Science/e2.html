@@ -119,52 +119,41 @@
 
   <!-- Main Lecture List -->
   <div class="container my-5" id="lectureList">
-    <h2 class="text-center mb-4">Chapters - Social Science </h2>
-
-
-    <!-- Economics -->
-    <h4 style="margin-bottom: 20px;">Economics</h4>
+    <h2 class="text-center mb-4">Sector of the Indian Economy</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Development<a href="e1.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-2 Sector of the Indian Economy<a href="e2.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-    </div>
-
-
-     <!--Geography  -->
-    <h4 style="margin-top: 35px; margin-bottom: 20px;">Geography </h4>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col"><div class="card subject-card"><div class="card-body"> Sector of the Indian Economy L1<button class="btn btn-sm btn-primary float-end" onclick="loadVideo('Sector of the Indian Economy L1', 'https://rumble.com/embed/v6t09zr/?pub=4m221v')">View</button></div></div></div>
       
-      <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Resources and Development<a href="g1.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-      <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Forest and Wildlife Resources<a href="g2.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-    </div>
-
-    <!-- Civics -->
-   <h4 style="margin-top: 35px; margin-bottom: 20px;">Civics </h4>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-       
-      <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Power Sharing <a href="c1.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-    </div>
-
-    
-
-    <h4 style="margin-top: 35px; margin-bottom: 20px;">History </h4>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Nationalism in Europe<a href="h1.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-    </div>
-
-
-
     </div>
   </div>
 
- 
+  <!-- Video Viewer Section -->
+  <div class="video-section container text-center" id="videoSection" >
+    <h3 id="videoTitle"></h3>
+    <div class="video-container my-3" >
+      <iframe id="videoPlayer" allowfullscreen></iframe>
+    </div>
+    <button class="back-button" onclick="goBack()">Back To Lecture</button>
+  </div>
+
   <!-- Script -->
   <script>
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
+    }
 
+    function loadVideo(title, url) {
+      document.getElementById('lectureList').style.display = 'none';
+      document.getElementById('videoSection').style.display = 'block';
+      document.getElementById('videoTitle').innerText = title;
+      document.getElementById('videoPlayer').src = url;
+    }
+
+    function goBack() {
+      document.getElementById('videoPlayer').src = '';
+      document.getElementById('videoSection').style.display = 'none';
+      document.getElementById('lectureList').style.display = 'block';
+    }
   </script>
   <script src="script.js"></script>
 </body>
