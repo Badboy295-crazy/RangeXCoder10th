@@ -41,3 +41,10 @@ document.onkeydown = e => {
 
 
 }
+
+
+  
+function goToVideo(title, url) {
+    window.location.href = `video.html?title=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+  
+}
