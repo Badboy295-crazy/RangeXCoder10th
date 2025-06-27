@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lectures - RangeXCoder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #f8fafc;
+      --bg-dark: #0f172a;
+      --bg-light: #ffffff;
+      --text-dark: #0f172a;
+      --text-light: #f1f5f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-dark);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary-color);
+      border: none;
+      padding: 0.6rem;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .subject-card {
+      background-color: #e2e8f0;
+      border-left: 5px solid var(--primary-color) ;
+      transition: transform 0.3s, background-color 0.3s;
+      
+    }
+
+    .subject-card:hover {
+      transform: translateY(-5px);
+      background-color: #cbd5e1;
+    }
+
+    .dark-mode .subject-card {
+      background-color: #334155;
+      color: var(--text-light);
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #4338ca;
+    }
+
+   
+
+    
+   
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .back-button {
+      margin-top: 1rem;
+      background-color: #e11d48;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    .back-button:hover {
+      background-color: #9f1239;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <i class="ri-moon-clear-line"></i>
+  </button>
+
+  <!-- Main Lecture List -->
+  <div class="container my-5" id="lectureList">
+    <h2 class="text-center mb-4">Daily Practice Paper (DPP)</h2>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+ 
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 1<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12JT0vXzxL081d9-dbhQFIKsBbxwAYC51/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 2<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12JyBBBd14cnJbjf4AG5eoCESyOOHYgEI/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 3<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12ODX__GjGmAJbNhgrSr15sK8z469GuJV/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 4<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12OYsgfwx71WZx8bwRUgsNDbI-JkDcNXd/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 5<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12PF64qLC4yd8MkRznBd8UzblqSuEYLAg/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 6<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12UefvSg3AA0DpKSTWNL5fH3aU3yoqgmj/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 7<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12UrODn6q3hHt6jUFmK0QsEshnfiDMQrZ/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 8<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12WNROePY_oPKQcnWXrJLCZtE54TwyF6L/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 9<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12YmOycyIou-ClasyFCQSLP3VVLJDXF3m/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 10<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12a53Vsb-Zraj59q9BlTAa-TGgicLq1nP/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 11<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12cRofAm4EWuqkOYJbBeyho4LjVRdBhZP/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 12<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12cq6eU4BUhXh4qT8QYYOmOlNfF4wS21e/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 13<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12lLWlRu0IkZcBXdWky1NKg85Mf4vgzHJ/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 14<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12lYVvuAsYBa6AadkPPOr9mhLDan4qOmz/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 15<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12lpDtoQ4LANe40xddV6Du_V2h6M26KSg/view?usp=drive_link')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">DPP 16<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/12vQp5UcNH9r2EUL3VW_bs_-ffDJv-HHi/view?usp=drive_link')">View</button></div></div></div>
+
+
+    </div>
+  </div>
+
+ 
+
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
