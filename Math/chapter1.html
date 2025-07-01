@@ -143,14 +143,14 @@
 
   <!-- Unlock Modal -->
 
-  <!-- <div id="lockModal">
+  <div id="lockModal">
     <div class="modal-content">
       <h2>🔒 Access Locked</h2>
       <p>Complete short link to unlock for 24 hours.</p>
       <button class="btn btn-primary" onclick="redirectToShortLink('')">Unlock Now</button>
       <div id="timer" style="display:none;"></div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Main Lecture List -->
   <div class="container my-5" id="lectureList">
@@ -215,7 +215,7 @@
 
     
 
-  const SHORT_LINK = "https://reel2earn.com/mathchapter1"; // your short link
+  const SHORT_LINK = "https://reel2earn.com/hi"; // your short link
   const ACCESS_KEY = "rx_access";
   const TIME_LIMIT = 24 * 60 * 60 * 1000;
 
@@ -236,58 +236,58 @@
     document.getElementById('lectureList').style.display = 'block';
   }
 
-  // function redirectToShortLink() {
-  //   window.location.href = SHORT_LINK;
-  // }
+  function redirectToShortLink() {
+    window.location.href = SHORT_LINK;
+  }
 
-  // function formatTime(ms) {
-  //   const h = Math.floor(ms / (1000 * 60 * 60));
-  //   const m = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
-  //   const s = Math.floor((ms % (1000 * 60)) / 1000);
-  //   return `${h}h ${m}m ${s}s`;
-  // }
+  function formatTime(ms) {
+    const h = Math.floor(ms / (1000 * 60 * 60));
+    const m = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((ms % (1000 * 60)) / 1000);
+    return `${h}h ${m}m ${s}s`;
+  }
 
-  // function startCountdown(expiry) {
-  //   const timer = document.getElementById('timer');
-  //   timer.style.display = 'block';
-  //   const interval = setInterval(() => {
-  //     const now = Date.now();
-  //     const diff = expiry - now;
-  //     if (diff <= 0) {
-  //       clearInterval(interval);
-  //       localStorage.removeItem(ACCESS_KEY);
-  //       location.reload();
-  //     } else {
-  //       timer.innerText = "Access expires in: " + formatTime(diff);
-  //     }
-  //   }, 1000);
-  // }
+  function startCountdown(expiry) {
+    const timer = document.getElementById('timer');
+    timer.style.display = 'block';
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const diff = expiry - now;
+      if (diff <= 0) {
+        clearInterval(interval);
+        localStorage.removeItem(ACCESS_KEY);
+        location.reload();
+      } else {
+        timer.innerText = "Access expires in: " + formatTime(diff);
+      }
+    }, 1000);
+  }
 
-  // window.onload = () => {
-  //   const urlParams = new URLSearchParams(window.location.search);
-  //   const savedTime = localStorage.getItem(ACCESS_KEY);
-  //   const now = Date.now();
+  window.onload = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const savedTime = localStorage.getItem(ACCESS_KEY);
+    const now = Date.now();
 
-  //   // If returning from short link
-  //   if (urlParams.get("unlocked") === "true") {
-  //     localStorage.setItem(ACCESS_KEY, now.toString());
-  //     document.getElementById("lockModal").style.display = "none";
-  //     document.getElementById("lectureList").style.display = "block";
-  //     startCountdown(now + TIME_LIMIT);
-  //   }
-  //   // If already unlocked
-  //   else if (savedTime && now - parseInt(savedTime) < TIME_LIMIT) {
-  //     document.getElementById("lockModal").style.display = "none";
-  //     document.getElementById("lectureList").style.display = "block";
-  //     startCountdown(parseInt(savedTime) + TIME_LIMIT);
-  //   }
-  //   // If not unlocked
-  //   else {
-  //     document.getElementById("lockModal").style.display = "flex";
-  //     document.getElementById("lectureList").style.display = "none";
-  //   }
+    // If returning from short link
+    if (urlParams.get("unlocked") === "true") {
+      localStorage.setItem(ACCESS_KEY, now.toString());
+      document.getElementById("lockModal").style.display = "none";
+      document.getElementById("lectureList").style.display = "block";
+      startCountdown(now + TIME_LIMIT);
+    }
+    // If already unlocked
+    else if (savedTime && now - parseInt(savedTime) < TIME_LIMIT) {
+      document.getElementById("lockModal").style.display = "none";
+      document.getElementById("lectureList").style.display = "block";
+      startCountdown(parseInt(savedTime) + TIME_LIMIT);
+    }
+    // If not unlocked
+    else {
+      document.getElementById("lockModal").style.display = "flex";
+      document.getElementById("lectureList").style.display = "none";
+    }
 
-  // };
+  };
 </script>
 
 
