@@ -143,14 +143,14 @@
 
   <!-- Unlock Modal -->
 
-  <div id="lockModal">
+  <!-- <div id="lockModal">
     <div class="modal-content">
-      <h2>🔒 Access Locked</h2>
+      <h2>🔒 Access  Locked</h2>
       <p>Complete short link to unlock for 24 hours.</p>
       <button class="btn btn-primary" onclick="redirectToShortLink('')">Unlock Now</button>
       <div id="timer" style="display:none;"></div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Main Lecture List -->
   <div class="container my-5" id="lectureList">
@@ -223,18 +223,7 @@
     document.body.classList.toggle('dark-mode');
   }
 
-  function loadVideo(title, url) {
-    document.getElementById('lectureList').style.display = 'none';
-    document.getElementById('videoSection').style.display = 'block';
-    document.getElementById('videoTitle').innerText = title;
-    document.getElementById('videoPlayer').src = url;
-  }
-
-  function goBack() {
-    document.getElementById('videoPlayer').src = '';
-    document.getElementById('videoSection').style.display = 'none';
-    document.getElementById('lectureList').style.display = 'block';
-  }
+ 
 
   function redirectToShortLink() {
     window.location.href = SHORT_LINK;
