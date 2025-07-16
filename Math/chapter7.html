@@ -147,21 +147,7 @@
     </div>
   </div> -->
 
-  <!-- Video Viewer Section -->
-  <div class="video-section container text-center" id="videoSection">
-    <h3 id="videoTitle"></h3>
-    <div class="video-container my-3">
-      <div id="loadingSpinner" style="display: none;">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-        <p class="mt-2">Loading video...</p>
-      </div>
-      <video id="hlsPlayer" controls style="display: none;"></video>
-      <iframe id="videoPlayer" allowfullscreen style="display: none;"></iframe>
-    </div>
-    <button class="back-button" onclick="goBack()">Back To Lecture</button>
-  </div>
+  
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -172,59 +158,10 @@
       document.body.classList.toggle('dark-mode');
     }
 
-    function playLecture(title, url) {
-      document.getElementById('lectureList').style.display = 'none';
-      document.getElementById('videoSection').style.display = 'block';
-      document.getElementById('videoTitle').innerText = title;
+   
 
-      const iframe = document.getElementById('videoPlayer');
-      const video = document.getElementById('hlsPlayer');
-      const spinner = document.getElementById('loadingSpinner');
-
-      iframe.style.display = "none";
-      video.style.display = "none";
-      spinner.style.display = "block";
-
-      if (url.endsWith(".m3u8")) {
-        if (hls) hls.destroy();
-        hls = new Hls();
-        hls.loadSource(url);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          spinner.style.display = "none";
-          video.style.display = "block";
-          video.play();
-        });
-      } else {
-        if (hls) hls.destroy();
-        iframe.onload = () => {
-          spinner.style.display = "none";
-          iframe.style.display = "block";
-        };
-        iframe.src = url;
-      }
-    }
-
-    function goBack() {
-      document.getElementById('lectureList').style.display = 'block';
-      document.getElementById('videoSection').style.display = 'none';
-
-      const video = document.getElementById('hlsPlayer');
-      const iframe = document.getElementById('videoPlayer');
-
-      video.pause();
-      video.src = "";
-      iframe.src = "";
-
-      video.style.display = "none";
-      iframe.style.display = "none";
-      document.getElementById('loadingSpinner').style.display = "none";
-
-      if (hls) {
-        hls.destroy();
-        hls = null;
-      }
-    }
+   
+  
   </script>
 </body>
 </html>
