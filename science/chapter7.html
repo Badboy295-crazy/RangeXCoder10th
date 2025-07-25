@@ -119,41 +119,40 @@
 
   <!-- Main Lecture List -->
   <div class="container my-5" id="lectureList">
-    <h2 class="text-center mb-4"> Science </h2>
+    <h2 class="text-center mb-4">Metals & Non-Metals </h2>
+    <h3>Lectures</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-    <h4 style="margin-bottom: 20px;">Chemistry</h4>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-      <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Chemical Reaction and Eqns<a href="chapter1.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-      <div class="col"><div class="card subject-card"><div class="card-body"> Ch-2 Acids, Bases & Salts<a href="chapter4.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-      <div class="col"><div class="card subject-card"><div class="card-body"> Ch-3 Metals & Non-Metals<a href="chapter7.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
+        <div class="col"> <div class="card subject-card"> <div class="card-body">Metals & Non-Metals L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Metals & Non-Metals L1 &url=https://d274dp7v20n4nf.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4492756/175336156347188929414/175336156347188929414_8929414.m3u8'" > View </button></div></div></div>
+       
     </div>
 
-
-    <h4 style="margin-top: 35px; margin-bottom: 20px;">Physics </h4>
+    <!-- <h3 style="margin-top: 35px;">Notes</h3>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Light - Reflection & Refrac.<a href="chapter2.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-2 Human Eye <a href="chapter5.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-    </div>
-     
-    <h4 style="margin-top: 35px; margin-bottom: 20px;"> Biology</h4>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+      <div class="col"><div class="card subject-card"><div class="card-body">Chemical Eqn and Reaction L1<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/14KM2kbnLWSFMKOLz9qX8jKLEyPuMt_yI/view?usp=drive_link')">View</button></div></div></div>
       
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-1 Life Process<a href="chapter3.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-     <div class="col"><div class="card subject-card"><div class="card-body"> Ch-2 Control & Coordination<a href="chapter6.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-    </div>
+    </div> -->
 
-     
   </div>
 
- 
+  <!-- Video Viewer Section -->
+  <div class="video-section container text-center" id="videoSection" >
+    <h3 id="videoTitle"></h3>
+    <div class="video-container my-3" >
+      <iframe id="videoPlayer" allowfullscreen></iframe>
+    </div>
+    <button class="back-button" onclick="goBack()">Back To Lecture</button>
+  </div>
+
   <!-- Script -->
   <script>
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
+    }
 
   </script>
   <script src="script.js"></script>
+  
 </body>
 </html>
