@@ -98,47 +98,51 @@
     
     
 
-    #lockModal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
+   
 
-    .modal-content {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 320px;
-    }
-    #lectureList { }
+    
+    
 
-    #timer {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #ff4444;
-    }
+   
   </style>
 </head>
-<body>
+<body onload="checkUnlock('https://lksfy.com/YXm96c0')" >
 
   
 
-  <!-- Unlock Modal  -->
- 
-  <!-- <div id="lockModal">
-    <div class="modal-content">
-      <h2>🔒 Access Locked</h2>
-      <p>Complete short link to unlock for 24 hours.</p>
-      <button id="unlockBtn">Unlock Now</button>
-      <div id="timer" style="display:none;"></div>
-    </div>
-  </div> -->
+  <!-- 💫 Lock Modal -->
+<div id="lockModal" style="display: none; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 9999; font-family: Arial, sans-serif; ">
+
+  <div style="
+    background: #ffffff;
+    color: #333;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+  ">
+    <h2 style="margin-bottom: 15px; font-size: 24px;">🔒 Access Restricted</h2>
+    <p style="font-size: 16px; margin-bottom: 25px;">Please unlock access to continue.</p>
+    
+    <button onclick="redirectToShortLink('https://lksfy.com/YXm96c0')" style="
+      background: linear-gradient(to right, #4CAF50, #2ecc71);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    " onmouseover="this.style.background='linear-gradient(to right, #43a047, #27ae60)'" onmouseout="this.style.background='linear-gradient(to right, #4CAF50, #2ecc71)'">
+      🔓 Unlock Now
+    </button>
+  </div>
+</div>
+   <div id="timer"></div>
+  
+
 
   <button class="theme-toggle" onclick="toggleTheme()">
     <i class="ri-moon-clear-line"></i>
@@ -196,27 +200,10 @@
     
   </script>
 
-  <!-- <script>
-
-    // Define your short link and unique access key here
-    const SHORT_LINK = "https://reel2earn.com/your-short-link?unlocked=true";
-    const ACCESS_KEY = "chapter1_access";
-  </script>
+  
   <script src="unlock.js"></script>
 
-  <script>
-    window.onload = () => {
-      checkUnlock(SHORT_LINK, ACCESS_KEY);
-      document.getElementById("unlockBtn").onclick = () => redirectToShortLink(SHORT_LINK);
-    };
-  </script>
-  <script>
-  window.onload = () => {
-  document.getElementById("lectureList").style.display = "block";
-  checkUnlock(SHORT_LINK, ACCESS_KEY);
-  document.getElementById("unlockBtn").onclick = () => redirectToShortLink(SHORT_LINK);
-};
-</script> -->
+  
 
   
 </body>
