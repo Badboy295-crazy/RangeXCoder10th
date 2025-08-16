@@ -1,6 +1,0 @@
-body { font-family: Arial; text-align: center; padding: 40px; background: #f9f9f9; }
-.question-box { background: white; padding: 25px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-.option { margin: 10px 0; padding: 12px; background: #e0e0e0; border-radius: 6px; cursor: pointer; }
-.option:hover { background: #d0d0d0; }
-#nextBtn { margin-top: 20px; padding: 10px 20px; background: green; color: white; border: none; border-radius: 6px; font-size: 16px; display: none; }
-#timer { margin-top: 10px; color: #888; }
