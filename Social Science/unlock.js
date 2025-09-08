@@ -1,7 +1,13 @@
 // unlock.js
 
 const TIME_LIMIT = 24 * 60 * 60 * 1000; // 24 hours in ms
-const ACCESS_KEY = "unlockedAccessTime"; // key for localStorage
+
+// Har page ka alag PAGE_ID hoga (HTML me set karna hoga)
+// Agar set nahi kiya to "default" use hoga
+const PAGE_ID = window.PAGE_ID || "default";
+
+// localStorage key unique banane ke liye PAGE_ID use kar rahe
+const ACCESS_KEY = "unlockedAccessTime_" + PAGE_ID;
 
 function formatTime(ms) {
   const h = Math.floor(ms / (1000 * 60 * 60));
@@ -35,12 +41,12 @@ function unlockPage(expiryTime) {
   if (timer) {
     startCountdown(expiryTime, timer, () => {
       localStorage.removeItem(ACCESS_KEY);
-      location.reload(); // Reload page after expiry
+      location.reload(); // Expire hone ke baad page reload
     });
   }
 }
 
-function checkUnlock(SHORT_LINK) {
+function checkUnlock() {
   const urlParams = new URLSearchParams(window.location.search);
   const now = Date.now();
   const savedTime = localStorage.getItem(ACCESS_KEY);
@@ -49,7 +55,7 @@ function checkUnlock(SHORT_LINK) {
     // Save current time
     localStorage.setItem(ACCESS_KEY, now.toString());
 
-    // Remove ?unlocked=true from the URL without reloading
+    // Remove ?unlocked=true from URL without reload
     window.history.replaceState({}, document.title, window.location.pathname);
 
     unlockPage(now + TIME_LIMIT);
@@ -70,4 +76,4 @@ function checkUnlock(SHORT_LINK) {
 
 function redirectToShortLink(SHORT_LINK) {
   window.location.href = SHORT_LINK;
-}     
+}
