@@ -119,28 +119,33 @@
 
   <!-- Main Lecture List -->
   <div class="container my-5" id="lectureList">
-    <h2 class="text-center mb-4">Political Parties  </h2>
+    <h2 class="text-center mb-4">Minerals and Energy Resources </h2>
     <h3>Lectures</h3>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-        <div class="col"> <div class="card subject-card"> <div class="card-body">Political Parties L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Political Parties L1 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4545152%2F175742197189767125088%2Findex_4.m3u8'" > View </button></div></div></div>
-        <div class="col"> <div class="card subject-card"> <div class="card-body">Political Parties L2<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Political Parties L2 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4546265%2F175751853959147125088%2Findex_4.m3u8'" > View </button></div></div></div>
-        <div class="col"> <div class="card subject-card"> <div class="card-body">Political Parties L3<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Political Parties L3 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4547227%2F175760499499067125088%2Findex_4.m3u8'" > View </button></div></div></div>
-        <div class="col"> <div class="card subject-card"> <div class="card-body">Political Parties L4<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Political Parties L4 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4555749%2F175854478897467125088%2Findex_4.m3u8'" > View </button></div></div></div>
-        <div class="col"> <div class="card subject-card"> <div class="card-body">Political Parties L5<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Political Parties L5 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4556927%2F175863137015737125088%2Findex_4.m3u8'" > View </button></div></div></div>
-        <div class="col"> <div class="card subject-card"> <div class="card-body">Political Parties L6<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Political Parties L6 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4556927%2F175863137015737125088%2Findex_4.m3u8'" > View </button></div></div></div>
-        
+        <div class="col"> <div class="card subject-card"> <div class="card-body">Minerals and Energy Resources L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Minerals and Energy Resources L1 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4559597%2F175881534439417125088%2Findex_4.m3u8'" > View </button></div></div></div>
+        <!-- <div class="col"> <div class="card subject-card"> <div class="card-body">Minerals and Energy Resources L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Minerals and Energy Resources L1 &url='" > View </button></div></div></div>
+        <div class="col"> <div class="card subject-card"> <div class="card-body">Minerals and Energy Resources L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Minerals and Energy Resources L1 &url='" > View </button></div></div></div>
+        <div class="col"> <div class="card subject-card"> <div class="card-body">Minerals and Energy Resources L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Minerals and Energy Resources L1 &url='" > View </button></div></div></div>
+         -->
     </div>
 
    <!-- <h2 class="mt-5">Notes</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col"><div class="card subject-card"><div class="card-body">Political Parties L1<button class="btn btn-sm btn-primary float-end" onclick="window.open('')">View</button></div></div></div>
+      <div class="col"><div class="card subject-card"><div class="card-body">Minerals and Energy Resources L1<button class="btn btn-sm btn-primary float-end" onclick="window.open('')">View</button></div></div></div>
       
     </div> -->
 
   </div>
 
-  
+  <!-- Video Viewer Section -->
+  <div class="video-section container text-center" id="videoSection" >
+    <h3 id="videoTitle"></h3>
+    <div class="video-container my-3" >
+      <iframe id="videoPlayer" allowfullscreen></iframe>
+    </div>
+    <button class="back-button" onclick="goBack()">Back To Lecture</button>
+  </div>
 
   <!-- Script -->
   <script>
