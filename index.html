@@ -11,7 +11,22 @@
   
 </head>
 <body background="https://t3.ftcdn.net/jpg/02/70/14/14/360_F_270141492_w6RT1iYsCkVWnAXBeA2uLUHE4l0NrsJd.jpg">
+
+
+   <div class="float-box" id="telegramBox">
+    <h2>📢 Join Our Telegram Channel</h2>
+    <h4>Stay Updated | Free Notes | Live Alerts</h4>
+    <p>
+      Get instant notifications on new lectures, downloadable study material, exam tips, 
+      and exclusive updates from the RangeXCoder Team — all in one place.
+      <br><br>Don’t miss out — your learning community awaits 🚀
+    </p>
+    <button class="join-btn" id="joinBtn">Click to Join</button>
+    <button class="timer-btn" id="timerBtn">Wait 5s</button>
+  </div>
+
   <button class="theme-toggle" onclick="toggleTheme()"><i class="ri-moon-line"></i></button>
+
 
   <header class="d-flex align-items-center justify-content-between p-3 custom-header">
     <img src="https://i.pinimg.com/236x/20/fa/a8/20faa8359d31757d6a2dc955d9029e02.jpg" alt="Logo" height="50">
@@ -42,7 +57,7 @@
           <div class="card-body text-white">
             <h4>Upcoming Class</h4>
             <p><i class="ri-time-line"></i> Starts at 5:00 PM</p>
-             <button class="btn btn-outline-light w-100"   onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title= First Live Class &url=https://dga9kme080o0w.cloudfront.net/out/v1/90ab1354cfcd4c5b83cf78a87d96041e/index.m3u8'" style="background-color:; "> Coming Soon</button>
+             <button class="btn btn-outline-light w-100"   onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title= First Class &url='" style="background-color:; "> Coming Soon</button>
 
 
          
@@ -55,7 +70,7 @@
           <div class="card-body text-white">
             <h4>Upcoming Class</h4>
             <p><i class="ri-time-line"></i> Starts at 8:00 PM</p>
-           <button class="btn btn-outline-light w-100"  onclick="window.location.href='https://rangexcoder-mediaplayer.netlify.app/?title=Second Live Class &url=https://dga9kme080o0w.cloudfront.net/out/v1/5c7cfedca3df4fc99ea383b5f2e6a7a8/index.m3u8'" style="background-color:;"> Coming Soon</button>   
+           <button class="btn btn-outline-light w-100"  onclick="window.location.href='https://rangexcoder-mediaplayer.netlify.app/?title=Second Class &url='" style="background-color:;" >Coming Soon </button>   
           </div>
         </div>
       </div>
@@ -68,8 +83,9 @@
         <div class="col"><div class="card subject-card"><div class="card-body">Math<a href="Math/math.html"><button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
         <div class="col"><div class="card subject-card"><div class="card-body">Social Science<a href="Social Science/socialscience.html"> <button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
         <div class="col"><div class="card subject-card"><div class="card-body">English<a href="English/english.html"><button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
-        <div class="col"><div class="card subject-card"><div class="card-body">Hindi<a href="ssshindi.html"><button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
+        <div class="col"><div class="card subject-card"><div class="card-body">Hindi<a href="Hindi/hindi.html"><button class="btn btn-sm btn-primary float-end">View</button></a></div></div></div>
         <div class="col"><div class="card subject-card"><div class="card-body">Computer Application<a href="sscomputer.html"><button class="btn btn-sm btn-primary float-end">View</button></a>
+        <div class="col"><div class="card subject-card"><div class="card-body">All Subject Notes<a href="https://drive.google.com/drive/folders/1srQGVVBkGd9B314zy74X8tRwmsY-3bHc?usp=drive_link"><button class="btn btn-sm btn-primary float-end">View</button></a>
          
         
         </div></div></div>
@@ -100,18 +116,44 @@
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
     }
-
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('show');
     }
-
-   
-    
   </script>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7102468761780379"
-     crossorigin="anonymous"></script>
+  <script>
+    const telegramLink = "https://t.me/YourChannelLink"; // 🔗 Replace with your Telegram link
+    const joinBtn = document.getElementById("joinBtn");
+    const timerBtn = document.getElementById("timerBtn");
+    const box = document.getElementById("telegramBox");
+
+    // Redirect when Click to Join is pressed
+    joinBtn.addEventListener("click", () => {
+      window.open(telegramLink, "_blank");
+    });
+
+    // Countdown for Not Now button
+    let seconds = 5;
+    const countdown = setInterval(() => {
+      seconds--;
+      if (seconds > 0) {
+        timerBtn.textContent = `Wait ${seconds}s`;
+      } else {
+        clearInterval(countdown);
+        timerBtn.textContent = 'Not Now';
+        timerBtn.classList.add('active');
+        timerBtn.disabled = false;
+
+        // When clicked, close the box with animation
+        timerBtn.addEventListener('click', () => {
+          box.style.animation = 'popDown 0.5s ease forwards';
+          setTimeout(() => box.remove(), 500);
+        });
+      }
+    }, 1000);
+  </script>
+ 
 
  <script src="script.js"></script>
      
