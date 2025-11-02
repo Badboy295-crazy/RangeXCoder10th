@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lectures - RangeXCoder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #f8fafc;
+      --bg-dark: #0f172a;
+      --bg-light: #ffffff;
+      --text-dark: #0f172a;
+      --text-light: #f1f5f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-dark);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary-color);
+      border: none;
+      padding: 0.6rem;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .subject-card {
+      background-color: #e2e8f0;
+      border-left: 5px solid var(--primary-color) ;
+      transition: transform 0.3s, background-color 0.3s;
+      
+    }
+
+    .subject-card:hover {
+      transform: translateY(-5px);
+      background-color: #cbd5e1;
+    }
+
+    .dark-mode .subject-card {
+      background-color: #334155;
+      color: var(--text-light);
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #4338ca;
+    }
+
+    .video-section {
+      display: none;
+      padding: 2rem;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16/9;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 4px solid var(--primary-color);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background-color: white;
+    }
+
+    .dark-mode .video-container {
+      background-color: #1e293b;
+      border-color: #818cf8;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .back-button {
+      margin-top: 1rem;
+      background-color: #e11d48;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    .back-button:hover {
+      background-color: #9f1239;
+    }
+  </style>
+  <!-- Step 1: PAGE_ID set karo -->
+  
+</head>
+<body>
+
+  
+
+  
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <i class="ri-moon-clear-line"></i>
+  </button>
+
+  <!-- Main Lecture List -->
+  <div class="container my-5" id="lectureList">
+    <h2 class="text-center mb-4">Some Applications Of Trignometry</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <div class="col"> <div class="card subject-card"> <div class="card-body"> Some Applications Of Trignometry L1<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Some Applications Of Trignometry L1 &url=https%3A%2F%2Fd1qcficr3lu37x.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4409472%2F174982914345591097666%2Findex_5.m3u8'"  >View</button></div></div></div>
+      <div class="col"> <div class="card subject-card"> <div class="card-body"> Some Applications Of Trignometry L2<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Some Applications Of Trignometry L2 &url=https%3A%2F%2Fd1qcficr3lu37x.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4410213%2F174991601648451097666%2Findex_5.m3u8'"  >View</button></div></div></div>
+      <div class="col"> <div class="card subject-card"> <div class="card-body"> Some Applications Of Trignometry L3<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Some Applications Of Trignometry L3 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4411382%2F175008869822868752407%2Findex_4.m3u8'"  >View</button></div></div></div>
+      <div class="col"> <div class="card subject-card"> <div class="card-body"> Some Applications Of Trignometry L4<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Some Applications Of Trignometry L4 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4412636%2F175017526367988752407%2Findex_4.m3u8'"  >View</button></div></div></div>
+      <div class="col"> <div class="card subject-card"> <div class="card-body"> Some Applications Of Trignometry L5<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Some Applications Of Trignometry L5 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4416060%2F175043509429588752407%2Findex_1.m3u8'"  >View</button></div></div></div>
+      <div class="col"> <div class="card subject-card"> <div class="card-body"> Some Applications Of Trignometry L6<button class="btn btn-sm btn-primary float-end" onclick="window.location.href=' https://rangexcoder-mediaplayer.netlify.app/?title=Some Applications Of Trignometry L6 &url=https%3A%2F%2Fd274dp7v20n4nf.cloudfront.net%2Ffile_library%2Fvideos%2Fchannel_vod_non_drm_hls%2F4416695%2F175052142386308752407%2Findex_4.m3u8'"  >View</button></div></div></div>
+      
+    </div>
+
+    <h2 style="margin-top: 35px;">Notes</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        
+        <div class="col"><div class="card subject-card"><div class="card-body">Some Applications Of Trignometry L1<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/10H_E-_WenQZ313GaADCWyl1_IBQtQNtE/view?usp=drive_link')">View</button></div></div></div>
+        <div class="col"><div class="card subject-card"><div class="card-body">Some Applications Of Trignometry L2<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/10XJuOlerJ2l01ZYTnKcj0SMV17wrQEd5/view?usp=drive_link')">View</button></div></div></div>
+        <div class="col"><div class="card subject-card"><div class="card-body">Some Applications Of Trignometry L3<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/10R2gDRLP5GOtYtSkUuZpW3nrky1ITTYI/view?usp=drive_link')">View</button></div></div></div>
+        <div class="col"><div class="card subject-card"><div class="card-body">Some Applications Of Trignometry L4<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/10OC0M2P52ypkhaFS1znK8suZ93L_8Zra/view?usp=drive_link')">View</button></div></div></div>
+        <div class="col"><div class="card subject-card"><div class="card-body">Some Applications Of Trignometry L5<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/10OaK8ET3fkf3k5VJAY4WaaFcQvOl4EGy/view?usp=drive_link')">View</button></div></div></div>
+        <div class="col"><div class="card subject-card"><div class="card-body">Some Applications Of Trignometry L6<button class="btn btn-sm btn-primary float-end" onclick="window.open('https://drive.google.com/file/d/17RKOvvxAOBY_5_EMYbvOfOkebbNnB7US/view?usp=drive_link')">View</button></div></div></div>
+      
+      </div>   
+
+    
+  </div>
+
+  <!-- Video Viewer Section -->
+  <div class="video-section container text-center" id="videoSection" >
+    <h3 id="videoTitle"></h3>
+    <div class="video-container my-3" >
+      <iframe id="videoPlayer" allowfullscreen></iframe>
+    </div>
+    <button class="back-button" onclick="goBack()">Back To Lecture</button>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function loadVideo(title, url) {
+      document.getElementById('lectureList').style.display = 'none';
+      document.getElementById('videoSection').style.display = 'block';
+      document.getElementById('videoTitle').innerText = title;
+      document.getElementById('videoPlayer').src = url;
+    }
+
+    function goBack() {
+      document.getElementById('videoPlayer').src = '';
+      document.getElementById('videoSection').style.display = 'none';
+      document.getElementById('lectureList').style.display = 'block';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
