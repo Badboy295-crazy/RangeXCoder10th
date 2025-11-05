@@ -12,18 +12,33 @@
 </head>
 <body background="https://t3.ftcdn.net/jpg/02/70/14/14/360_F_270141492_w6RT1iYsCkVWnAXBeA2uLUHE4l0NrsJd.jpg">
 
+  <!-- Telegram Float Box with Overlay -->
+<div class="telegram-overlay" id="telegramOverlay"></div>
 
-   <div class="float-box" id="telegramBox">
-    <h2>📢 Join Our Telegram Channel</h2>
-    <h4>Stay Updated | Free Notes | Live Alerts</h4>
-    <p>
-      Get instant notifications on new lectures, downloadable study material, exam tips, 
-      and exclusive updates from the RangeXCoder Team — all in one place.
-      <br><br>Don’t miss out — your learning community awaits 🚀
-    </p>
-    <button class="join-btn" id="joinBtn">Click to Join</button>
-    <button class="timer-btn" id="timerBtn">Wait 5s</button>
+<div class="telegram-float-box" id="telegramBox">
+  <div class="telegram-header">
+    <div class="telegram-icon-circle">
+      <i class="ri-telegram-line telegram-icon"></i>
+    </div>
+    <div class="telegram-texts">
+      <h2>Join Our Telegram Channel</h2>
+      <p class="subline">Free Notes • Exam Tips • Live Alerts</p>
+    </div>
   </div>
+
+  <p class="telegram-description">
+    📢 Stay ahead with instant updates on <b>new lectures</b>, downloadable study material, 
+    and important exam notifications from the <b>RangeXCoder Team</b>.  
+    <br><br>Be part of our growing learning community 🚀
+  </p>
+
+  <div class="telegram-btns">
+    <button class="join-btn" id="joinBtn"><i class="ri-send-plane-fill"></i> Join Now</button>
+    <button class="timer-btn" id="timerBtn" disabled>Wait 5s</button>
+  </div>
+</div>
+  
+  
 
   <button class="theme-toggle" onclick="toggleTheme()"><i class="ri-moon-line"></i></button>
 
@@ -123,35 +138,38 @@
   </script>
 
   <script>
-    const telegramLink = "https://t.me/YourChannelLink"; // 🔗 Replace with your Telegram link
-    const joinBtn = document.getElementById("joinBtn");
-    const timerBtn = document.getElementById("timerBtn");
-    const box = document.getElementById("telegramBox");
+    const telegramLink = "https://t.me/rangexcoder295";
+const joinBtn = document.getElementById("joinBtn");
+const timerBtn = document.getElementById("timerBtn");
+const box = document.getElementById("telegramBox");
+const overlay = document.getElementById("telegramOverlay");
 
-    // Redirect when Click to Join is pressed
-    joinBtn.addEventListener("click", () => {
-      window.open(telegramLink, "_blank");
-    });
+joinBtn.addEventListener("click", () => {
+  window.open(telegramLink, "_blank");
+});
 
-    // Countdown for Not Now button
-    let seconds = 5;
-    const countdown = setInterval(() => {
-      seconds--;
-      if (seconds > 0) {
-        timerBtn.textContent = `Wait ${seconds}s`;
-      } else {
-        clearInterval(countdown);
-        timerBtn.textContent = 'Not Now';
-        timerBtn.classList.add('active');
-        timerBtn.disabled = false;
+let seconds = 5;
+const countdown = setInterval(() => {
+  seconds--;
+  if (seconds > 0) {
+    timerBtn.textContent = `Wait ${seconds}s`;
+  } else {
+    clearInterval(countdown);
+    timerBtn.textContent = 'Not Now';
+    timerBtn.classList.add('active');
+    timerBtn.disabled = false;
+    timerBtn.addEventListener('click', closeTelegramBox);
+  }
+}, 1000);
 
-        // When clicked, close the box with animation
-        timerBtn.addEventListener('click', () => {
-          box.style.animation = 'popDown 0.5s ease forwards';
-          setTimeout(() => box.remove(), 500);
-        });
-      }
-    }, 1000);
+function closeTelegramBox() {
+  box.style.animation = 'popDown 0.5s ease forwards';
+  overlay.style.animation = 'fadeOut 0.5s forwards';
+  setTimeout(() => {
+    box.remove();
+    overlay.remove();
+  }, 500);
+}
   </script>
  
 

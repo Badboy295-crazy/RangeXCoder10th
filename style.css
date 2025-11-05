@@ -130,3 +130,183 @@ footer {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       background-color: white;
 }
+
+/* Telegram Float Box */
+/* Overlay background */
+.telegram-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9998;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+/* ===== Telegram Overlay (Blur Background) ===== */
+.telegram-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9998;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+/* ===== Float Box ===== */
+.telegram-float-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  padding: 25px 28px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  z-index: 9999;
+  animation: popUp 0.5s ease;
+}
+
+/* ===== Header Section ===== */
+.telegram-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.telegram-icon-circle {
+  background: linear-gradient(135deg, #0088cc, #00bfff);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,136,204,0.4);
+}
+
+.telegram-icon {
+  font-size: 30px;
+  color: #fff;
+}
+
+.telegram-texts h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.telegram-texts .subline {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 3px;
+}
+
+/* ===== Description ===== */
+.telegram-description {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ===== Buttons ===== */
+.telegram-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.join-btn, .timer-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.join-btn {
+  background: linear-gradient(135deg, #0088cc, #00bfff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(0,136,204,0.4);
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,136,204,0.5);
+}
+
+.timer-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: #eee;
+}
+
+.timer-btn.active {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.timer-btn:hover.active {
+  background: #d63030;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes popDown {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -45%) scale(0.9);
+  }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 576px) {
+  .telegram-float-box {
+    width: 90%;
+    padding: 20px;
+  }
+  .telegram-texts h2 {
+    font-size: 1.1rem;
+  }
+  .telegram-description {
+    font-size: 0.85rem;
+  }
+}
